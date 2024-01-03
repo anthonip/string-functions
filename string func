@@ -1,0 +1,89 @@
+def string_length(string):
+    return len(string)
+
+def string_upper(string):
+    return string.upper()
+
+def string_lower(string):
+    return string.lower()
+
+def string_reverse(string):
+    return string[::-1]
+
+def string_concatenate(string1, string2):
+    return string1 + string2
+
+def string_replace(string, old, new):
+    return string.replace(old, new)
+
+def string_capitalize(string):
+    return string.capitalize()
+
+def string_split(string, delimiter):
+    return string.split(delimiter)
+
+def string_title(string):
+    return string.title()
+
+def main():
+    while True:
+        print("STRING FUNCTIONS")
+#displaying options
+        print("Choose a string function:")
+        print("1. String Length")
+        print("2. Convert to Uppercase")
+        print("3. Convert to Lowercase")
+        print("4. Reverse String")
+        print("5. Concatenate Strings")
+        print("6. Replace Substring")
+        print("7. Capitalize String")
+        print("8. Split String")
+        print("9. Convert to Title Case")
+        print("10. Replace Substring")
+
+        choice = input("Enter the choice of the function you want to use: ")
+        if choice == '1':
+            string = input("Enter a string: ")
+            print(f"Length of the string is: {string_length(string)}")
+        elif choice == '2':
+            string = input("Enter a string: ")
+            print(f"Uppercase string: {string_upper(string)}")
+        elif choice == '3':
+            string = input("Enter a string: ")
+            print(f"Lowercase string: {string_lower(string)}")
+        elif choice == '4':
+            string = input("Enter a string: ")
+            print(f"Reversed string: {string_reverse(string)}")
+        elif choice == '5':
+            string1 = input("Enter the first string: ")
+            string2 = input("Enter the second string: ")
+            print(f"Concatenated string: {string_concatenate(string1, string2)}")
+        elif choice == '6':
+            string = input("Enter a string: ")
+            old_substring = input("Enter the substring to replace: ")
+            new_substring = input("Enter the new substring: ")
+            print(f"Modified string: {string_replace(string, old_substring, new_substring)}")
+        elif choice == '7':
+            string = input("Enter a string: ")
+            print(f"Capitalized string: {string_capitalize(string)}")
+        elif choice == '8':
+            string = input("Enter a string: ")
+            delimiter = input("Enter the delimiter: ")
+            print(f"Split string: {string_split(string, delimiter)}")
+        elif choice == '9':
+            string = input("Enter a string: ")
+            print(f"Title cased string: {string_title(string)}")
+        elif choice == '10':
+            string = input("Enter a string: ")
+            old_substring = input("Enter the substring to replace: ")
+            new_substring = input("Enter the new substring: ")
+            print(f"Modified string: {string_replace(string, old_substring, new_substring)}")
+        else:
+            print("Invalid choice. Please enter a number between 1 to 10.")
+
+        continue_choice = input("Do you want to continue? (yes/no): ")
+        if continue_choice.lower() != 'yes':
+            break
+
+if __name__ == "__main__":
+    main()
